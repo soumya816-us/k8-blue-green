@@ -1,0 +1,9 @@
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: frontend
+spec:
+  serviceRef:
+    name: frontend-service # route traffic to the awesome-service
+    port: 80
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:329599629534:targetgroup/expense-dev-frontend/7f85545064a4d814
